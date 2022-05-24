@@ -67,13 +67,56 @@ while(i<=100){
 //////////////////////////////////////////////////
 ////////Exercise 2.5
 /////////////////
+let b=0;
+while(b!=42){
+    let favnum=readlineSync.question('What is your favorite number ? ');
+    if(favnum==42){
+        b=42;
+    }
 
+}
 
 //////////////////////////////////////////////////
 ////////Exercise 2.6
 /////////////////
+let day=readlineSync.question('What is number of today ? ');
+
+switch (day){
+    case "0":
+        console.log("Weeks aren't long enough for you ??!");
+        break;
+    case "1":
+        console.log("Monday");
+        break;
+    case "2":
+        console.log("Tuesday");
+        break;
+    case "3":
+        console.log("Wegnesday");
+        break;
+    case "4":
+        console.log("Thursday");
+        break;
+    case "5":
+        console.log("Friday!!!!");
+        break;
+    case "6":
+        console.log("!!Saturday!!");
+        break;
+    case "7":
+        console.log("!!!Sunday!!!");
+        break;        
+}
+
 
 
 //////////////////////////////////////////////////
 ////////Exercise 2.7
 /////////////////
+var fin=0;
+let   numero=readlineSync.question('What is number goes? ');
+for(i=0;i<numero;i++){
+    let addnum=readlineSync.question(`What is the ${i} value ? `)
+    fin = (1*fin)+(1*addnum);
+}
+console.log(fin);
