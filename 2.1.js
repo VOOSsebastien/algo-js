@@ -30,7 +30,22 @@ else if((minAge<currentAge)&&(currentAge<maxAge)){
 //////////////////////////////////////////////////
 ////////Exercise 2.3
 /////////////////
+let a=0;
+console.log("1_er méthode WHILE");
+while(a<=100){
+    if((a%2)==0){
+        console.log(a);
+    }
+    a++;
+}
+console.log("2_er méthode FOR");
 
+for(a=0;a<=100;a++) {
+    if((a%2)==0){
+        console.log(a);
+    }
+    a++;
+}
 //////////////////////////////////////////////////
 ////////Exercise 2.4
 /////////////////
