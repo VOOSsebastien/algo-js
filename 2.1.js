@@ -49,6 +49,20 @@ for(a=0;a<=100;a++) {
 //////////////////////////////////////////////////
 ////////Exercise 2.4
 /////////////////
+let i=0;
+console.log("1_er méthode WHILE EXERCICE 2.4");
+while(i<=100){
+    if((i%2)==0){
+        console.log(i)
+        console.log("-->(i/2)")
+        console.log(i/2)
+    }else{
+        console.log(i)
+        console.log("-->(i*3)")
+        console.log(i*3)
+    }
+    i++;
+}
 
 //////////////////////////////////////////////////
 ////////Exercise 2.5
