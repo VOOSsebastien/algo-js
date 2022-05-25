@@ -106,6 +106,23 @@ max(numbers);
 ///////////Exercise 4.5//////////////
 ////////////////////////////////////
 
+/**
+ * [calcDistance description]
+ * @param  {[Number]}  [//coordonates first point]
+ * @param  {[Number]}  [//coordonates first point]
+ * @param  {[Number]}  [//coordonates second point]
+ * @param  {[Number]}  [//coordonates second point]
+ * @return {[Number]}      [distance between]
+ */
+function calcDistance(x1, y1, x2, y2) {
+    console.log( Math.hypot(x2-x1, y2-y1));
+    }
+    let x1 = readlineSync.question('x coordonates first point ');
+    let y1 = readlineSync.question('y coordonates first point ');
+    let x2 = readlineSync.question('x coordonates second point ');
+    let y2 = readlineSync.question('y coordonates second point ');
+ calcDistance(x1,y1,x2,y2);
+
 //////////////////////////////////////
 ///////////Exercise 4.6//////////////
 ////////////////////////////////////
@@ -133,6 +150,14 @@ console.log("The factorial of " + t + " is " + answer);
 //////////////////////////////////////
 ///////////Exercise 4.7//////////////
 ////////////////////////////////////
+
+/**
+ * [elevator description]
+ * @param  {[Number]} left [left floor elevator]
+ * @param  {[Number]} call [current floor elevator]
+ * @param  {[Number]} right [right floor elevator]
+ * @return {[Number]}      [nearer elevator]
+ */
 function elevator(left,call,right){
     let x = left-call;
     let y = right-call;
@@ -154,3 +179,40 @@ elevator(a, b, c);
 ///////////Exercise 4.8//////////////
 ////////////////////////////////////
 
+/**
+ * [totalTime description]
+ * @param  {[Number]} n [number of tills]
+ * @param  {[Number]} arr [time in queue]
+ * @return {[Number]}    [total time]
+ */
+
+function totalTime(n,arr){
+    var sum=0;
+    let count=0;
+    if(n==0){
+        console.log("NO TILL AVALAIBLE!!! ");
+    }else if(n==1){
+        for(i=0;i<arr.length;i++){
+            sum=(1*sum)+(1*arr[i]);
+        }
+        console.log(`array sum : ${sum}`);
+    }else{
+        count=arr[0];
+        for(i=0;i<arr.length;i++){
+        if(count>arr[i+1]){
+            count=count-arr[i+1];
+            sum=sum+arr[i+1];
+        }else{
+            petit=count;
+            count=arr[i+1];
+            count=count-petit;
+            sum=sum+petit;
+        }
+    }
+
+    }
+    totaltime=sum;
+    console.log(totaltime);
+}
+numbers=[10,5,8,2,10,8,10];
+totalTime(2,numbers);
