@@ -56,7 +56,6 @@ function multiRand(n){
     }
 }
 let n= readlineSync.question('how many numbers do you wnt ?  ');
-
 multiRand(n);
 console.log(numbers);
 

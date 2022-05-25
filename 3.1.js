@@ -47,9 +47,6 @@ console.log(`array moy : ${result4/arr4.length}`);
 /////Exercise 3.3///////////
 /////////////////////////
 
-
-
-
 numbers = [1, 2, 3];
 numbersCopy = [];
 for (i = 0; i < numbers.length; i++) {
@@ -72,9 +69,6 @@ double = (x) => x * 2;
 
 numbers.map(double);
 console.log(numbers,numbersCopy);
-
-
-
 
 ////////////////////////
 /////Exercise 3.4///////////
