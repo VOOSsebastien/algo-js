@@ -6,7 +6,7 @@ const readlineSync = require("readline-sync");
 
 //////////////////////////////
 ////////DOCUMENTATION/////////
-/**
+/** 
  * [calcSurface description]
  * @param  {[Number]} a [Length]
  * @param  {[Nummber]} b [width]
@@ -32,12 +32,11 @@ console.log(surface);
  */
 function rand10(){
     random=Math.floor(Math.random() * 10 ) + 1;
-    return(random);
+console.log(random);
 }
 ///expl///
 let random=0;
 rand10();
-console.log(random);
 
 
 
