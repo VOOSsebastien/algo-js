@@ -21,7 +21,7 @@ console.log(`Sonic est ${vitesse} et il a ${piece}pièces dans ses chaussures`);
 
 //////////////////////////////////
 ///////////Exercise 1.2
-//////////////////////////////
+////////////////////////5.2//////
 let name="Lambert",firstname="Gerard ",city="Paris";
 console.log(`Your name is ${firstname}${name} and you live in ${city}.`)
 ///////////////////////

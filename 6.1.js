@@ -3,7 +3,7 @@ const readlineSync = require("readline-sync");
 //////////////////////////////////////
 ///////////Exercise 6.1//////////////
 ////////////////////////////////////
-/*
+
 class Cat {
     constructor(name, age) {
         this.name = name;
@@ -13,7 +13,7 @@ class Cat {
 let x = new Cat("skitty","9 years");
 let y =new Cat("Pixel","6 years");
 console.log(x,y);
-*/
+
 //////////////////////////////////////
 ///////////Exercise 6.2//////////////
 ////////////////////////////////////
@@ -33,30 +33,55 @@ new Person("VOOS ","Sebastien").sayHello();
 ///////////Exercise 6.3//////////////
 ////////////////////////////////////
 
-class Dog{
-    constructor(name, greeting){
-        this.name=name;
-        this.greeting=greeting;
-    }
-}class Cat{
-    constructor(name, greeting){
-        this.name=name;
-        this.greeting=greeting;
-    }
-}
-class Animal extends Dog { 
+
+const Animal = { 
     sayHello() {
-        return `${this.constructor.greeting}! I'm ${this.name}!`;
+        console.log(  `${this.greeting}! I'm ${this.name}!`);
+        }
+}
+class Cat2  {
+    constructor(name, greeting){
+        this.name=name;
+        this.greeting=greeting;
     }
 }
-
-
-console.log(new Dog("Léa","BON"));
-
-console.log(new Animal("BOBO","FN").sayHello);
-
+class Dog  {
+    constructor(name, greeting){
+        this.name=name;
+        this.greeting=greeting;
+    }
+}
+Object.setPrototypeOf(Cat2.prototype, Animal);
+let c = new Cat2('LEA','BONJOUR');
+Object.setPrototypeOf(Dog.prototype, Animal);
+let d = new Dog('AZERTY','SALUT!TOI!');
+c.sayHello();
+d.sayHello();
 
 
 //////////////////////////////////////
 ///////////Exercise 6.4//////////////
 ////////////////////////////////////
+
+class Person {
+    constructor(firstName, lastname) {
+      this.firstName = firstName;
+      this.lastname = lastname;
+    }
+    get name() {
+      return this.firstName+ this.lastname;
+    }
+    set name(val) {
+      this.firstName = val.split(" ")[0];
+      this.lastname = val.split(" ")[1];
+    }
+      talk() {
+        console.log(this.firstName + " " + this.lastname);
+      }    
+  }
+  let obj1 = new Person("Clark", "kent");
+  console.log(obj1.name) // vraie identité
+  obj1.talk();
+  obj1.name = "SUPER MAN";
+  console.log(obj1.name); // fausse identité
+  obj1.talk();

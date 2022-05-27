@@ -12,9 +12,9 @@ const readlineSync = require("readline-sync");
 ////////////////////////////////////
 
 function askTvSerie() {
-    let castMembers=[];
-    let name= readlineSync.question('name of TV Show : ');
-    let productionYear= readlineSync.question('production year of TV Show : ');
+    var castMembers=[];
+    var name= readlineSync.question('name of TV Show : ');
+    var productionYear= readlineSync.question('production year of TV Show : ');
     let i=0;
     while(i!="stop"){
          i= readlineSync.question('cast members of TV Show !TAPEZ stop POUR SORTIR!');
