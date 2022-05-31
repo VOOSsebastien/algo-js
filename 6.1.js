@@ -72,16 +72,9 @@ class Person {
       return this.firstName+ this.lastname;
     }
     set name(val) {
-      this.firstName = val.split(" ")[0];
-      this.lastname = val.split(" ")[1];
-    }
-      talk() {
-        console.log(this.firstName + " " + this.lastname);
-      }    
+      console.log("new NAME " +this.firstName + " " + this.lastname);
+    }   
   }
   let obj1 = new Person("Clark", "kent");
-  console.log(obj1.name) // vraie identité
-  obj1.talk();
-  obj1.name = "SUPER MAN";
-  console.log(obj1.name); // fausse identité
-  obj1.talk();
+  console.log(obj1.name);  
+  obj1.name = ("clark","kent");
