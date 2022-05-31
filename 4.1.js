@@ -157,11 +157,9 @@ console.log("The factorial of " + t + " is " + answer);
  * @return {[Number]}      [nearer elevator]
  */
 function elevator(left,call,right){
-    let x = left-call;
-    let y = right-call;
-    s=Math.abs(x);
-    v=Math.abs(y);
-    if(s>=v){
+    let x = Math.abs(left-call);
+    let y = Math.abs(right-call);
+    if(x>=y){
         console.log("right");
     }else{
         console.log("left");
@@ -185,32 +183,36 @@ elevator(a, b, c);
  */
 
 function totalTime(n,arr){
-    var sum=0;
+    let sum=0;
     let count=0;
+    //if caisses vides
     if(n==0){
-        console.log("NO TILL AVALAIBLE!!! ");
+        console.log("NO CHECKOUTS AVALAIBLE!!! ");
     }else if(n==1){
+        //1seule caisse juste somme
         for(i=0;i<arr.length;i++){
             sum=(1*sum)+(1*arr[i]);
         }
         console.log(`array sum : ${sum}`);
     }else{
         count=arr[0];
+        //for pour changement  
         for(i=0;i<arr.length;i++){
         if(count>arr[i+1]){
+            //si 1>2 alors 1-2 et 1=new1
             count=count-arr[i+1];
             sum=sum+arr[i+1];
         }else{
+            //si 1<2 alors on echange 1 et 2 pusi comme if1>2
             petit=count;
             count=arr[i+1];
             count=count-petit;
             sum=sum+petit;
         }
     }
-
     }
     totaltime=sum;
     console.log(totaltime);
 }
-numbers=[10,5,8,2,10,8,10];
+numbers=[10,5,8,2];
 totalTime(2,numbers);
