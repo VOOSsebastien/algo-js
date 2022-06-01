@@ -11,13 +11,13 @@ class Cat {
     }
 }
 let x = new Cat("skitty","9 years");
-let y =new Cat("Pixel","6 years");
+let y =new Cat("Pixel","5 years");
 console.log(x,y);
 
 //////////////////////////////////////
 ///////////Exercise 6.2//////////////
 ////////////////////////////////////
-/*
+
 class Person{
     constructor(firstname, lastname){
         this.firstname=firstname;
@@ -28,7 +28,7 @@ class Person{
     }
 }
 new Person("VOOS ","Sebastien").sayHello();
-*/
+
 //////////////////////////////////////
 ///////////Exercise 6.3//////////////
 ////////////////////////////////////
@@ -63,7 +63,7 @@ d.sayHello();
 ///////////Exercise 6.4//////////////
 ////////////////////////////////////
 
-class Person {
+class Person1 {
     constructor(firstName, lastname) {
       this.firstName = firstName;
       this.lastname = lastname;
@@ -75,6 +75,7 @@ class Person {
       console.log("new NAME " +this.firstName + " " + this.lastname);
     }   
   }
-  let obj1 = new Person("Clark", "kent");
+  let obj1 = new Person1("Clark", "kent");
   console.log(obj1.name);  
-  obj1.name = ("clark","kent");
+  obj1.name = ("clark","kent"); 
+  

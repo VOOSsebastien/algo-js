@@ -10,6 +10,7 @@ const readlineSync = require("readline-sync");
  * @return {[objet]}[objet serie compose du nom ,annee ,castMembers]
  */
 ////////////////////////////////////
+
 let castMembers=[];
 
 function askTvSerie() {
@@ -49,7 +50,6 @@ randomizeCast(castMembers);
 console.log(`Randomized cast : ${castMembers}`)
 console.log("objet serie une fois modifie");
 console.log(JSON.stringify(newSerie));
-;
 
 //////////////////////////////////////
 ///////////Exercise 5.3//////////////

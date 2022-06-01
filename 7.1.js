@@ -12,7 +12,6 @@ console.log(random);
 }
 let random=0,ok=0;
 rand100();
-
 while(ok==0){
     guess= readlineSync.question('guess my number  : ');
     if(random>guess){
@@ -23,9 +22,6 @@ while(ok==0){
     ok=1;
     }
     console.log("WELL GUESSED");
-
-
-
 ///////////////////////////
 ///////////Exercise 7.2//////////////
 ///////////////////////////////////////////////
@@ -37,7 +33,6 @@ for(i=0;i<n-2;i++){
     fibolist.push(sum);
 }
 console.log(fibolist);
-
 ///////////////////////////
 ///////////Exercise 7.3//////////////
 ///////////////////////////////////////////////
@@ -53,12 +48,9 @@ if(count<2){
     console.log("PRIMER NUMBER");
 }
 console.log(b);
-
-
 ///////////////////////////
 ///////////Exercise 7.4//////////////
 ///////////////////////////////////////////////
-
 function remove(value) {
     var index = listPizza.indexOf(value);
     if (index > -1) {
@@ -82,7 +74,6 @@ function remove(value) {
     );
 }
 */
-
 function demandeClient(){
  clientChoice= readlineSync.question(`Hello! Welcome to the Pizza Flavors Manager.
 
@@ -168,7 +159,19 @@ main();
 ///////////////////////////
 ///////////Exercise 7.6//////////////
 ///////////////////////////////////////////////
+/*
+class Circle{ 
+    constructor(xPos,yPos,radius){
+        this.xPos=xPos;
+        this.yPos=yPos;
+        this.radius=radius;
+    }
+    get{
+        
+    }
 
+}
+*/
 ///////////////////////////
 ///////////Exercise 7.7//////////////
 ///////////////////////////////////////////////
